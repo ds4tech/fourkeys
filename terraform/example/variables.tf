@@ -1,6 +1,7 @@
 variable "project_id" {
     type    = string
     description = "project to deploy four keys resources to"
+    default     = "fourkeys-386218"
 }
 
 variable "enable_apis" {
@@ -11,7 +12,7 @@ variable "enable_apis" {
 
 variable "region" {
     type = string
-    default = "us-central1"
+    default = "europe-central2"
     description = "Region to deploy four keys resources in."
 }
 
@@ -28,6 +29,7 @@ variable "bigquery_region" {
 variable "parsers" {
   type        = list(string)
   description = "List of data parsers to configure. Acceptable values are: 'github', 'gitlab', 'cloud-build', 'tekton', 'pagerduty'"
+  default     = ["github"]
 }
 
 variable "event_handler_container_url" {
