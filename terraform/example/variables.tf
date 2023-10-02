@@ -29,7 +29,7 @@ variable "bigquery_region" {
 variable "parsers" {
   type        = list(string)
   description = "List of data parsers to configure. Acceptable values are: 'github', 'gitlab', 'cloud-build', 'tekton', 'pagerduty'"
-  default     = ["github"]
+  default     = ["github","circleci"]
 }
 
 variable "event_handler_container_url" {
