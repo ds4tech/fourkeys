@@ -5,4 +5,6 @@ gcloud run deploy event-handler --image gcr.io/fourkeys-386218/event-handler:lat
 
 gcloud builds submit bq-workers --config=bq-workers/parsers.cloudbuild.yaml --project $PROJECT_ID --substitutions=_SERVICE=github
 gcloud builds submit bq-workers --config=bq-workers/parsers.cloudbuild.yaml --project $PROJECT_ID --substitutions=_SERVICE=circleci
+
+ gcloud run services list --project $PROJECT_ID
 ```
