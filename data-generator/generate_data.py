@@ -23,6 +23,7 @@ import random
 import secrets
 import time
 import sys
+import ssl
 
 from hashlib import sha1
 from urllib.request import Request, urlopen
